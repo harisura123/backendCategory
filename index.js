@@ -3,12 +3,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 const {connection} = require('./db')
-const bodyParser = require('body-parser');
+
 const app = express()
 
 app.use(express.json());
 app.use(cors());
-app.use(bodyParser.json());
 
 const AuthRouter = require('./Routes/AuthRouter');
 const CategoryRouter = require('./Routes/Categories');
